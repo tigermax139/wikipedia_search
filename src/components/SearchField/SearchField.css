@@ -1,0 +1,78 @@
+.searchForm {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.searchInput {
+    border: 3px solid var(--orange);
+    background-color: var(--blue);
+    border-radius: 15px;
+    width: 30px;
+    transition: 0.3s width,
+                0.2s border;
+    padding: 5px;
+    color: white;
+}
+.searchInputPen {
+    display: block;
+    font-size: 0;
+    width: 3px;
+    height: 25px;
+    background-color: var(--orange);
+    transform: rotate(-45deg);
+    transition: 0.4s;
+
+    position: absolute;
+    top: 30px;
+    left: 167px;
+}
+.searchInput:hover,
+.searchInputWrapper:hover {
+    cursor: pointer;
+}
+.searchInput:focus,
+.searchInput--focused {
+    border-color: var(--orange);
+    outline: none;
+    width: 300px;
+    transition: 0.6s width,
+                0.4s border;
+    cursor: text;
+}
+.searchInput:focus ~ .searchInputPen,
+.searchInput--focused ~ .searchInputPen {
+    opacity: 0;
+    top: 100px;
+    transition: 0.4s;
+}
+.searchInput:focus ~ .appTitle {
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    transition: 0.4s;
+}
+.searchButton {
+    border: 2px solid var(--orange);
+    color: white;
+    font-size: 15px;
+    background-color: var(--blue);
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 5px 15px;
+    opacity: 0;
+    transition: 0.4s;
+}
+.searchButton:hover,
+.searchButton:focus {
+    cursor: pointer;
+    border-color: var(--orange);
+    transition:  0.4s;
+}
+.searchInput:focus ~ .searchButton,
+.searchInput--focused ~ .searchButton {
+    opacity: 1;
+    transition: 0.6s;
+}

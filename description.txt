@@ -1,0 +1,23 @@
+this application include following technologies:
+- react
+- redux (also redux thunk for async dispatch );
+- axios
+The App will allow to visit a random Wikipedia page, and to search for user defined keyword.
+In addition,  can search suggestions, from Google suggest queries API;
+
+Development process consist of next steps:
+- Create basic project structure
+- install required packages
+- make decomposition on small componets
+- create template for each components
+- writing program logic
+- binding components between themself
+---------------------------------------------------------------------
+Description logic of program
+-1) User enter search query in input ( value of this input we save in redux, and field in redux is binding as value to input )
+-2) When user submiting search form, program dispatch 2 actions for fetch articles from wikipedia and fetch keywords from google.suggest services
+-3) After success loading program will render list component
+-4) Also you can click on one of keywords and then in redux dispatch new query, and repeat step 3
+----------------------------------------------------------------
+Issues
+- google.suggest api is legacy services without support CORS, i decide to use helper service

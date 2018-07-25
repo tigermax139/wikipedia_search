@@ -1,0 +1,18 @@
+.suggest {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.suggestTitle {
+    transition: 0.4s;
+}
+.suggestTitle:hover,
+.suggestTitle:focus {
+    outline: none;
+    text-decoration: underline;
+    color: orange;
+    transition: 0.4s;
+    cursor: pointer;
+}
